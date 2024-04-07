@@ -1,0 +1,29 @@
+build:
+  docker:
+    web: Dockerfile
+    task: Dockerfile.task
+  config:
+    CODENAME: bookworm
+run:
+  args:
+  - sleep
+  - 60s
+  image: task
+deploy:
+  web:
+    args:
+    - python
+    - -m
+    - http.server
+    - "5000"
+  task:
+    command:
+    - sleep
+    args:
+    - infinity
+  worker:
+    command:
+    - sleep
+    args:
+    - infinity
+    image: task

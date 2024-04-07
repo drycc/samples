@@ -1,0 +1,3 @@
+ARG CODENAME
+
+FROM registry.drycc.cc/drycc/base:${CODENAME}

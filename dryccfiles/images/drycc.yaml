@@ -1,0 +1,19 @@
+run:
+  args:
+  - sleep
+  - 60s
+  image: registry.drycc.cc/drycc/base:bookworm
+deploy:
+  web:
+    image: registry.drycc.cc/drycc/python-dev
+    args:
+    - python
+    - -m
+    - http.server
+    - "5000"
+  task:
+    image: docker.io/library/nginx
+    command:
+    - sleep
+    args:
+    - infinity
