@@ -12,11 +12,24 @@ Includes:
 
 We assume that you have already installed drycc workflow and logged into an account.
 
+### Deploy use git push
+
 ```
-$ 
+$ curl -SL https://github.com/drycc/samples/archive/refs/heads/main.tar.gz | tar xvz -C .
+$ cd samples-main/dryccfiles/build
+$ git init; git add .; git commit --all -m "init repo"; git branch -M main
+$ drycc create demo
+$ git push drycc main
 ```
 
+### Deploy use drycc pull
 
+```
+$ curl -SL https://github.com/drycc/samples/archive/refs/heads/main.tar.gz | tar xvz -C .
+$ cd samples-main/dryccfiles/image
+$ drycc create demo
+$ drycc pull registry.drycc.cc/drycc/base:bookworm
+```
 
 
 ## Development
