@@ -5,19 +5,31 @@ This repository contains sample implementations of the core components of the Dr
 Includes:
 
 * [buildpacks](buildpacks/)
+* [dryccfile](dryccfile/)
 * [dockerfile](dockerfile/)
-* [dryccfiles](dryccfiles/)
 
 ## Start here:
 
 We assume that you have already installed drycc workflow and logged into an account.
 
+### Deploy use git push
+
 ```
-$ 
+$ curl -SL https://github.com/drycc/samples/archive/refs/heads/main.tar.gz | tar xvz -C .
+$ cd samples-main/dryccfile/build
+$ git init; git add .; git commit --all -m "init repo"; git branch -M main
+$ drycc create demo
+$ git push drycc main
 ```
 
+### Deploy use drycc pull
 
-
+```
+$ curl -SL https://github.com/drycc/samples/archive/refs/heads/main.tar.gz | tar xvz -C .
+$ cd samples-main/dryccfile/image
+$ drycc create demo
+$ drycc pull registry.drycc.cc/drycc/base:bookworm
+```
 
 ## Development
 
