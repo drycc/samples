@@ -20,5 +20,6 @@ from . import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^healthz', views.healthz, name='healthz'),
+    url(r'^letters', views.letters, name='letters'),
     url(r'^$', views.index, name='index'),
 ]
