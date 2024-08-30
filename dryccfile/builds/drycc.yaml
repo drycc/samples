@@ -9,7 +9,7 @@ build:
     task:
       CODENAME: bookworm
 run:
-  args:
+- args:
   - sleep
   - 60s
   image: task

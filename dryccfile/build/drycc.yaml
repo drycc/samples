@@ -3,7 +3,7 @@ build:
     CODENAME: bookworm
     PYTHON_VERSION: 3.12
 run:
-  args:
+- args:
   - sleep
   - 60s
 deploy:

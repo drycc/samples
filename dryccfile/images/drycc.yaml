@@ -1,5 +1,5 @@
 run:
-  args:
+- args:
   - sleep
   - 60s
   image: registry.drycc.cc/drycc/base:bookworm
