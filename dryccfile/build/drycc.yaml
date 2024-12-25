@@ -1,11 +1,22 @@
 build:
   config:
-    CODENAME: bookworm
-    PYTHON_VERSION: 3.12
+  - name: CODENAME
+    value: bookworm
+  - name: PYTHON_VERSION
+    value: "3.12"
 run:
-- args:
-  - sleep
-  - 60s
+  web:
+    args:
+    - sleep
+    - 60s
+  task:
+    args:
+    - sleep
+    - 60s
+  worker:
+    args:
+    - sleep
+    - 60s
 deploy:
   web:
     args:

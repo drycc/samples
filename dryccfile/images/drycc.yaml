@@ -1,8 +1,14 @@
 run:
-- args:
-  - sleep
-  - 60s
-  image: registry.drycc.cc/drycc/base:bookworm
+  web:
+    args:
+    - sleep
+    - 60s
+    image: registry.drycc.cc/drycc/base:bookworm
+  task:
+    args:
+    - sleep
+    - 60s
+    image: registry.drycc.cc/drycc/base:bookworm
 deploy:
   web:
     image: registry.drycc.cc/drycc/python-dev

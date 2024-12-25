@@ -4,15 +4,29 @@ build:
     task: Dockerfile.task
   config:
     web:
-      CODENAME: bookworm
-      PYTHON_VERSION: 3.12
+    - name: CODENAME
+      value: bookworm
+    - name: PYTHON_VERSION
+      value: "3.12"
     task:
-      CODENAME: bookworm
+    - name: CODENAME
+      value: bookworm
 run:
-- args:
-  - sleep
-  - 60s
-  image: task
+  web:
+    args:
+    - sleep
+    - 60s
+    image: task
+  task:
+    args:
+    - sleep
+    - 60s
+    image: task
+  worker:
+    args:
+    - sleep
+    - 60s
+    image: task
 deploy:
   web:
     args:
