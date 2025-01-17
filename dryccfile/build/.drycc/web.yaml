@@ -1,0 +1,17 @@
+kind: pipeline
+ptype: web
+build:
+  docker: Dockerfile
+  arg:
+    CODENAME: bookworm
+    PYTHON_VERSION: "3.12"
+run:
+  args:
+  - sleep
+  - 60s
+deploy:
+  args:
+  - python
+  - -m
+  - http.server
+  - "5000"

@@ -1,0 +1,15 @@
+kind: pipeline
+ptype: task
+build:
+  docker: Dockerfile.task
+  arg:
+    CODENAME: bookworm
+run:
+  args:
+  - sleep
+  - 60s
+deploy:
+  command:
+  - sleep
+  args:
+  - infinity

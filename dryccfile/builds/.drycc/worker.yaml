@@ -1,0 +1,13 @@
+kind: pipeline
+ptype: worker
+run:
+  args:
+  - sleep
+  - 60s
+  image: task
+deploy:
+  command:
+  - sleep
+  args:
+  - infinity
+  image: task

@@ -1,0 +1,15 @@
+kind: pipeline
+ptype: task
+run:
+  args:
+  - sleep
+  - 60s
+  image: registry.drycc.cc/drycc/base:bookworm
+config:
+- cache
+deploy:
+  image: docker.io/library/nginx
+  command:
+  - sleep
+  args:
+  - infinity

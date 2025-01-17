@@ -1,0 +1,16 @@
+kind: pipeline
+ptype: web
+run:
+  args:
+  - sleep
+  - 60s
+  image: registry.drycc.cc/drycc/base:bookworm
+config:
+- cache
+deploy:
+  image: registry.drycc.cc/drycc/python-dev
+  args:
+  - python
+  - -m
+  - http.server
+  - "5000"
