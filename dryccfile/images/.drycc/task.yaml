@@ -7,6 +7,8 @@ run:
   image: registry.drycc.cc/drycc/base:bookworm
 config:
 - cache
+env:
+  PORT: 5000
 deploy:
   image: docker.io/library/nginx
   command:
