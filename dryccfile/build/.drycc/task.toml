@@ -1,0 +1,8 @@
+ptype = "task"
+
+[run]
+args = ["sleep", "60s"]
+
+[deploy]
+command = ["sleep"]
+args = ["infinity"]

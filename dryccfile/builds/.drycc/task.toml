@@ -1,0 +1,14 @@
+ptype = "task"
+
+[build]
+docker = "Dockerfile.task"
+
+[build.arg]
+CODENAME = "bookworm"
+
+[run]
+args = ["sleep", "60s"]
+
+[deploy]
+command = ["sleep"]
+args = ["infinity"]

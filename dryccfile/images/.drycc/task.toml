@@ -1,0 +1,14 @@
+ptype = "task"
+config = ["cache"]
+
+[env]
+PORT = "5000"
+
+[run]
+args = ["sleep", "60s"]
+image = "registry.drycc.cc/drycc/base:bookworm"
+
+[deploy]
+image = "docker.io/library/nginx"
+command = ["sleep"]
+args = ["infinity"]

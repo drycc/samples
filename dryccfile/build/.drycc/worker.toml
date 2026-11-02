@@ -1,0 +1,8 @@
+ptype = "worker"
+
+[run]
+args = ["sleep", "60s"]
+
+[deploy]
+command = ["sleep"]
+args = ["infinity"]
